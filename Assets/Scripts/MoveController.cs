@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class CubeCercleMove : MonoBehaviour
+public class MoveController : MonoBehaviour
 {
     [SerializeField] private float _speedMove;
     [SerializeField] private float _speedRotate;
     [SerializeField] private float _speedScale;
 
-    void Update()
+    private void Update()
     {
         transform.position += transform.forward * _speedMove * Time.deltaTime;
         transform.Rotate(0, _speedRotate * Time.deltaTime, 0, Space.Self);
